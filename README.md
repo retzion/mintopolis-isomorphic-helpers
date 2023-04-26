@@ -39,7 +39,7 @@
 3. In your project, run...<br />
    `rm -rf node_modules/mintopolis-isomorphic-helpers && npm i`
 
-- <i>Using `npm unlink`can alter your dependency declaration in your package.json file. Deleting the node module and reinstalling based on your package.json dependencies is less problematic.</i>
+- <i>Using `npm unlink` can alter your dependency declaration in your package.json file. Deleting the node module and reinstalling based on your package.json dependencies is less problematic.</i>
 
 ### Linting
 

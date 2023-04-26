@@ -23,7 +23,7 @@ const config = {
 gulp.task("clean", () =>
   gulp
     .src([config.paths.js.dist, config.paths.test.dist])
-    .pipe(rimraf({ force: true }))
+    .pipe(rimraf({ force: true })),
 )
 
 gulp.task("babel", ["babel-src", "babel-test"])
@@ -32,14 +32,14 @@ gulp.task("babel-src", ["lint-src"], () =>
   gulp
     .src(config.paths.js.src)
     .pipe(babel())
-    .pipe(gulp.dest(config.paths.js.dist))
+    .pipe(gulp.dest(config.paths.js.dist)),
 )
 
 gulp.task("babel-test", ["lint-test"], () =>
   gulp
     .src(config.paths.test.src)
     .pipe(babel())
-    .pipe(gulp.dest(config.paths.test.dist))
+    .pipe(gulp.dest(config.paths.test.dist)),
 )
 
 gulp.task("lint-src", () =>
@@ -49,7 +49,7 @@ gulp.task("lint-src", () =>
     .pipe(eslint.format())
     // To have the process exit with an error code (1) on
     // lint error, return the stream and pipe to failAfterError last.
-    .pipe(eslint.failAfterError())
+    .pipe(eslint.failAfterError()),
 )
 
 gulp.task("lint-test", () =>
@@ -59,7 +59,7 @@ gulp.task("lint-test", () =>
     .pipe(eslint.format())
     // To have the process exit with an error code (1) on
     // lint error, return the stream and pipe to failAfterError last.
-    .pipe(eslint.failAfterError())
+    .pipe(eslint.failAfterError()),
 )
 
 gulp.task("watch", () => {
@@ -68,7 +68,7 @@ gulp.task("watch", () => {
 })
 
 gulp.task("test", ["babel"], () =>
-  gulp.src([config.paths.test.run]).pipe(mocha({ reporter: "spec" }))
+  gulp.src([config.paths.test.run]).pipe(mocha({ reporter: "spec" })),
 )
 
 // Default Task

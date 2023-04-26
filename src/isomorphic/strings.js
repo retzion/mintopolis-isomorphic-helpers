@@ -25,23 +25,24 @@ function cleanString(str) {
 
 function obfuscateAccount(account) {
   account &&
-    account.slice(0, 4) +
-      "..." +
-      account.slice(account.length - 4, account.length)
+    `${account.slice(0, 4)}...${account.slice(
+      account.length - 4,
+      account.length,
+    )}`
 }
 
 function truncate(str, n) {
   /** @todo refactor to show a complete word at the end of the string */
   /** @dev refactor to split(" ") and put the elipses after the last word that fits N */
   if (!str) return ""
-  return str.length > n ? str.slice(0, n - 1) + "..." : str
+  return str.length > n ? `${str.slice(0, n - 1)}...` : str
 }
 
 function imageDataToBase64(data, type) {
   if (!data) return
 
   const base64data = Buffer.from(data).toString("base64")
-  return `data:${type || "image/jpeg"};base64,` + base64data // <-- This is so we can render it on the page
+  return `data:${type || "image/jpeg"};base64,${base64data}` // <-- This is so we can render it on the page
 }
 
 function base64ToImageData(data) {
@@ -73,7 +74,7 @@ function stripUniqueTokenInfo(token = {}) {
 }
 
 function nftMetadata(token, appUrl) {
-  let metadata = {
+  const metadata = {
     name: token.name,
     description: token.description,
     tokenId: token.tokenId,

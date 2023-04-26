@@ -12,7 +12,7 @@
   "parserOptions": {
     "ecmaVersion": 2020
   },
-  "ignorePatterns": ["**/test-dist/**", "**/dist/*/*.js", "**/dist/*.js"],
+  "ignorePatterns": ["**/test-dist/**", "**/dist/*/*.js", "**/dist/*.js", "gulpfile.babel.js"],
   "rules": {
     "arrow-body-style": "off",
     "brace-style": ["error", "stroustrup"],
@@ -37,8 +37,9 @@
     "no-extend-native": "error",
     "no-global-assign": "error",
     "no-param-reassign": "off",
+    "no-underscore-dangle": ["error", { "allow": ["_id"] }],
     "object-curly-newline": "off",
-    "operator-linebreak": ["error", "before"],
+    "operator-linebreak": ["error", "after"],
     "prefer-destructuring": "off",
     "radix": "off",
     "space-before-function-paren": [
