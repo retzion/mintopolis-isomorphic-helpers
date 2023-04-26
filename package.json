@@ -1,0 +1,66 @@
+{
+  "name": "mintopolis-isomorphic-helpers",
+  "version": "0.0.1",
+  "author": "mintopolis",
+  "main": "dist/index.js",
+  "description": "Mintopolis library of isomorphic functions used in the Mintopolis App",
+  "scripts": {
+    "lint": "eslint src test",
+    "format": "npx prettier --write .",
+    "build:source": "rimraf dist/ && babel src/ --out-dir dist/",
+    "build:tests": "rimraf test-dist/ && babel test/ --out-dir test-dist/",
+    "clean": "rimraf dist/ && rimraf test-dist/",
+    "build": "npm run build:source && npm run build:tests",
+    "test": "npm run clean && npm run build && node node_modules/mocha/bin/mocha --timeout 10000 --reporter spec test-dist/*",
+    "prepare": "npx husky install",
+    "eslint": "npx eslint --ext .js, ."
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "homepage": "https://www.npmjs.com/package/mintopolis-isomorphic-helpers",
+  "bugs": {
+    "url": ""
+  },
+  "keywords": [
+    "blockchain",
+    "nft",
+    "erc721",
+    "polygon",
+    "AI Art",
+    "crypto"
+  ],
+  "devDependencies": {
+    "@babel/cli": "7.8.4",
+    "@babel/core": "7.9.0",
+    "@babel/node": "7.8.7",
+    "@babel/preset-env": "7.9.5",
+    "babel-eslint": "10.1.0",
+    "chai": "3.5.0",
+    "dotenv": "8.2.0",
+    "gulp": "3.9.1",
+    "gulp-babel": "6.1.2",
+    "gulp-eslint": "3.0.1",
+    "gulp-mocha": "3.0.1",
+    "gulp-rimraf": "0.2.0",
+    "husky": "^7.0.0",
+    "mocha": "3.1.0",
+    "node-fetch": "2.6.1",
+    "prettier": "^2.8.4",
+    "regenerator-runtime": "0.13.7",
+    "rimraf": "2.5.4",
+    "run-sequence": "1.2.2"
+  },
+  "engine": "node >= 0.10.x",
+  "private": false,
+  "license": "MIT",
+  "dependencies": {
+    "crypto-js": "4.1.1",
+    "dayjs": "1.10.4",
+    "eslint": "^8.5.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.3",
+    "html-to-text": "7.1.1"
+  }
+}

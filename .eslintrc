@@ -1,0 +1,70 @@
+{
+  "env": {
+    "node": true,
+    "commonjs": true,
+    "es2021": true
+  },
+  "extends": ["airbnb-base"],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parserOptions": {
+    "ecmaVersion": 2020
+  },
+  "ignorePatterns": ["**/test-dist/**", "**/dist/*/*.js", "**/dist/*.js"],
+  "rules": {
+    "arrow-body-style": "off",
+    "brace-style": ["error", "stroustrup"],
+    "camelcase": [
+      "off",
+      {
+        "properties": "always"
+      }
+    ],
+    "func-names": ["error", "never"],
+    "function-paren-newline": ["error", "consistent"],
+    "import/no-extraneous-dependencies": "off",
+    "import/no-unresolved": [
+      "error",
+      {
+        "ignore": ["^@"]
+      }
+    ],
+    "import/prefer-default-export": "off",
+    "linebreak-style": "off",
+    "no-else-return": "off",
+    "no-extend-native": "error",
+    "no-global-assign": "error",
+    "no-param-reassign": "off",
+    "object-curly-newline": "off",
+    "operator-linebreak": ["error", "before"],
+    "prefer-destructuring": "off",
+    "radix": "off",
+    "space-before-function-paren": [
+      "error",
+      {
+        "anonymous": "never",
+        "named": "never",
+        "asyncArrow": "always"
+      }
+    ],
+    "spaced-comment": "off",
+    "eol-last": 0,
+    "no-multiple-empty-lines": ["error", { "max": 1, "maxEOF": 0 }],
+    "arrow-parens": 0,
+    "no-await-in-loop": 0,
+    "no-plusplus": 0,
+    "dot-notation": 0,
+    "no-lonely-if": 0,
+    "no-async-promise-executor": 0,
+    "import/no-named-as-default": 0,
+    "import/no-named-as-default-member": 0,
+    "global-require": 0,
+    "import/no-import-module-exports": 0,
+    "consistent-return": 0,
+    "no-unused-expressions": 0,
+    "quotes": ["error", "double"],
+    "semi": 0
+  }
+}
