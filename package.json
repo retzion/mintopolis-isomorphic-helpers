@@ -1,6 +1,6 @@
 {
   "name": "mintopolis-isomorphic-helpers",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "mintopolis",
   "main": "dist/index.js",
   "description": "Mintopolis library of isomorphic functions used in the Mintopolis App",

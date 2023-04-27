@@ -24,11 +24,13 @@ function cleanString(str) {
 }
 
 function obfuscateAccount(account) {
-  return account &&
+  return (
+    account &&
     `${account.slice(0, 4)}...${account.slice(
       account.length - 4,
       account.length,
     )}`
+  )
 }
 
 function truncate(str, n) {
