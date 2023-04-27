@@ -1,6 +1,6 @@
 {
   "name": "mintopolis-isomorphic-helpers",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "mintopolis",
   "main": "dist/index.js",
   "description": "Mintopolis library of isomorphic functions used in the Mintopolis App",
@@ -17,11 +17,11 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "git@github.com:retzion/mintopolis-isomorphic-helpers.git"
   },
   "homepage": "https://www.npmjs.com/package/mintopolis-isomorphic-helpers",
   "bugs": {
-    "url": ""
+    "url": "https://github.com/retzion/mintopolis-isomorphic-helpers/issues"
   },
   "keywords": [
     "blockchain",
