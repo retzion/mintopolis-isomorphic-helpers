@@ -6,6 +6,8 @@ import { assert, expect } from "chai"
 import "regenerator-runtime/runtime.js"
 import { strings } from "../dist"
 
+const testAddresses = ["0xB2Cc4d838daAA1A2C2ae3a8381A0ACA2F86b3591"]
+
 describe("Testing strings.js...", () => {
   describe("testing strings.test() function...", () => {
     it("function exists", () => {
@@ -31,6 +33,25 @@ describe("Testing strings.js...", () => {
 
       const stringResult = strings.test("test")
       expect(stringResult.typeOfParams).to.equal("string")
+    })
+  })
+
+  describe("testing strings.obfuscateAccount() function...", () => {
+    it("function exists", () => {
+      assert(strings.obfuscateAccount, "function does not exist")
+    })
+
+    it("function returns a result", () => {
+      const result = strings.obfuscateAccount(testAddresses[0])
+
+      assert(result, "function fails to return a value")
+    })
+
+    it("function returns the correct result", () => {
+      const result = strings.obfuscateAccount(testAddresses[0])
+
+      assert(result, "function fails to return a value")
+      expect(result).to.contain("...")
     })
   })
 })

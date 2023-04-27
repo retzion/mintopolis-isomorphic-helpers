@@ -1,6 +1,6 @@
 {
   "name": "mintopolis-isomorphic-helpers",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "author": "mintopolis",
   "main": "dist/index.js",
   "description": "Mintopolis library of isomorphic functions used in the Mintopolis App",
@@ -39,6 +39,9 @@
     "babel-eslint": "10.1.0",
     "chai": "3.5.0",
     "dotenv": "8.2.0",
+    "eslint": "^8.5.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.3",
     "gulp": "3.9.1",
     "gulp-babel": "6.1.2",
     "gulp-eslint": "3.0.1",
@@ -58,9 +61,6 @@
   "dependencies": {
     "crypto-js": "4.1.1",
     "dayjs": "1.10.4",
-    "eslint": "^8.5.0",
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.25.3",
     "html-to-text": "7.1.1"
   }
 }
