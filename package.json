@@ -1,6 +1,6 @@
 {
   "name": "mintopolis-isomorphic-helpers",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "author": "mintopolis",
   "main": "dist/index.js",
   "description": "Mintopolis library of isomorphic functions used in the Mintopolis App",
@@ -12,6 +12,7 @@
     "clean": "rimraf dist/ && rimraf test-dist/",
     "build": "npm run build:source && npm run build:tests",
     "test": "npm run clean && npm run build && node node_modules/mocha/bin/mocha --timeout 10000 --reporter spec test-dist/*",
+    "publish": "npm run clean && npm run build && npm publish",
     "prepare": "npx husky install",
     "eslint": "npx eslint --ext .js, ."
   },
