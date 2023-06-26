@@ -12,7 +12,12 @@
   "parserOptions": {
     "ecmaVersion": 2020
   },
-  "ignorePatterns": ["**/test-dist/**", "**/dist/*/*.js", "**/dist/*.js", "gulpfile.babel.js"],
+  "ignorePatterns": [
+    "**/test-dist/**",
+    "**/dist/*/*.js",
+    "**/dist/*.js",
+    "gulpfile.babel.js"
+  ],
   "rules": {
     "arrow-body-style": "off",
     "brace-style": ["error", "stroustrup"],

@@ -18,7 +18,25 @@ function calcTotalOriginals(collection) {
   return possibileOriginals
 }
 
+/**
+ * @title collectionContainsTrait
+ *
+ * @param {object} collection
+ * @param {string} trait
+ * optional @param {string} value
+ *
+ * @returns {boolean} Collection contains trait name (and value if provided)
+ */
+function collectionContainsTrait(collection, trait, value) {
+  const attribute = collection?.attributes?.find(
+    (a) => a.trait_type === trait && (!value || a.values.includes(value)),
+  )
+
+  return Boolean(attribute)
+}
+
 module.exports = {
   calcTotalOriginals,
+  collectionContainsTrait,
   test,
 }

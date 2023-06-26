@@ -69,4 +69,36 @@ describe("Testing data.js...", () => {
       expect(result).to.equal(9)
     })
   })
+
+  describe("testing data.collectionContainsTrait() function...", () => {
+    let exists
+
+    it("function exists", () => {
+      assert(data.collectionContainsTrait)
+    })
+
+    it("function returns false when `trait` is not found", () => {
+      exists = data.collectionContainsTrait(collection, "No trait found")
+      assert(!exists)
+    })
+
+    it("function returns true when `trait` is found and `value` is not specified", () => {
+      exists = data.collectionContainsTrait(collection, "Style")
+      assert(exists)
+    })
+
+    it("function returns false when `value` is not found", () => {
+      exists = data.collectionContainsTrait(
+        collection,
+        "Style",
+        "No style found",
+      )
+      assert(!exists)
+    })
+
+    it("function returns true when `value` is found", () => {
+      exists = data.collectionContainsTrait(collection, "Style", "digital art")
+      assert(exists)
+    })
+  })
 })
